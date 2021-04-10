@@ -1,5 +1,7 @@
 package daos;
 
+import models.Car;
+
 import java.sql.*;
 import java.util.concurrent.DelayQueue;
 import java.util.logging.Level;
@@ -20,10 +22,12 @@ public class RUNNER {
         }
     }
     //to test Connection
-    public static void main(String[] args) throws SQLException {
+    public static void main(String[] args) throws SQLException, ClassNotFoundException {
         Connection connection =RUNNER.getConnection();
         DAOCLASS daoclass = new DAOCLASS();
-       daoclass.findById(2);
+        //Car lenaCar=new Car(5,"Mustang","Corvet", 2021,"Yellow");
+        daoclass.delete(3);
+
     }
 
 
